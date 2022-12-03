@@ -17,6 +17,14 @@ def insert(node, value)
   node
 end
 
+def inorder(node)
+  return unless node
+
+  inorder(node.left)
+  p node.value
+  inorder(node.right)
+end
+
 class BST
 end
 
@@ -25,8 +33,10 @@ root = nil
 root = insert(root, 3)
 root = insert(root, 6)
 root = insert(root, 5)
+root = insert(root, 7)
+root = insert(root, 1)
+root = insert(root, 10)
+root = insert(root, 2)
 
-p root.value
-p root.right.value
-p root.left
 p root
+inorder(root)

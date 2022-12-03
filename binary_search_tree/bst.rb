@@ -1,3 +1,6 @@
+# frozen_string_literal: true
+
+# Binary Search Tree Node class
 class Node
   attr_accessor :value, :left, :right
 

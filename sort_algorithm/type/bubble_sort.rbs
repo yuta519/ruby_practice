@@ -1,0 +1,11 @@
+# TypeProf 0.21.3
+
+# Revealed types
+#  bubble_sort.rb:13 #=> Array[Integer]
+#  bubble_sort.rb:14 #=> Array[Integer]
+
+# Classes
+class Object
+  private
+  def bubble_sort: (Array[Integer] ary) -> Array[Integer]
+end

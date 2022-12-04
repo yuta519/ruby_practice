@@ -28,6 +28,18 @@ def inorder(node)
   inorder(node.right)
 end
 
+def exist?(node, value)
+  return false unless node
+
+  # printf('node.value: %s, value: %s', node.value, value)
+
+  return true if node.value == value
+
+  return exist?(node.left, value) if node.value > value
+
+  exist?(node.right, value) if node.value < value
+end
+
 class BST
 end
 
@@ -43,3 +55,9 @@ root = insert(root, 2)
 
 p root
 inorder(root)
+
+p exist?(root, 3)
+p exist?(root, 1)
+p exist?(root, 10)
+p exist?(root, 8)
+p exist?(root, 13)
